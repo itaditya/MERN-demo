@@ -1,10 +1,14 @@
 ## To Start Local Server - 
  1. Install heroku-cli
  2. Install nodemon with `npm i -g nodemon`
- 3. Run `npm i` to install the dependencies
+ 3. Run `npm i` to install the server-side dependencies
  4. Run `touch .env` then open it and fill it like the sample .env file.
  5. Run `npm start` and make sure the mongo instance is also running.
-
+ 6. Run `cd client ` in separate terminal to change into client directory.
+ 7. In client directory run `npm i` to install client-side dependencies.
+ 8. In client directory run `npm start `.
+ 9. Navigate to localhost:3000 in the browser.
+ 
 ## Sample .env file
 ```
 NODE_ENV=development
@@ -14,9 +18,24 @@ googleClientSecret=--------------
 mongoURI=mongodb://localhost:27017/merndemodb
 cookieKey=---------------
 HOST_URL=http://localhost:5000
+stripePubKey=pk_test_--------------
+stripeSecretKey=sk_test_-------------
 ```
+
+## Milestones 
+ 1. Configure Express to work with React.js via Proxy.
+ 2. Google Oauth2.0 Api.
+ 3. Stripe payment Api.
+ 4. Setup production build to Heroku.
+ 5. Handle multiple env variables for both server and client.
+ 6. Use ES2017 syntax with async/await instead of promises.
+ 7. React with Redux architecture.
+ 8. Session Authentication with Passport.js and Cookies.
+ 9. Create Webhooks for Google and Stripe Apis.
+ 10. Database Management for MongoDB.
 
 Note - 
 1. Heroku Cli is used for handling **environment variables** and deploys.
 2. To get **googleClientID** and **googleClientSecret** make a new project at [here](https://console.developers.google.com) and enable the Google+ api.
-3. If you don't have **mongodb** locally, then create a remote db [here](https://mlab.com/home)
+3. To get **stripePubKey** and **stripeSecretKey** create account on [Stripe](http://stripe.com/).
+4. If you don't have **mongodb** locally, then create a remote db [here](https://mlab.com/home)
