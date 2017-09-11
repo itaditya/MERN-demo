@@ -10,6 +10,7 @@
   "scripts": {
     "start": "heroku local dev",
     "client": "npm start --prefix client",
+    "heroku-postbuild": "(npm install --prefix client) && (npm run build --prefix client)",
     "lt": "lt --port 5000 --subdomain merndemo",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
