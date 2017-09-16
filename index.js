@@ -9,6 +9,9 @@ const config = require('./config');
 mongoose.connect(config.mongoURI);
 const app = express();
 app.use(morgan('dev'));
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
 app.use(bodyParser.json());
 app.use(cookieSession({
     maxAge: 30 * 24 * 60 * 60 * 1000,
@@ -17,6 +20,7 @@ app.use(cookieSession({
 app.use(passport.initialize());
 app.use(passport.session());
 require('./routes/authRoutes')(app);
+require('./routes/surveyRoutes')(app);
 require('./routes/billingRoutes')(app);
 if (config.NODE_ENV === 'production') {
     const path = require('path');

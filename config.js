@@ -6,5 +6,7 @@ module.exports = {
     mongoURI : process.env.mongoURI,
     cookieKey: process.env.cookieKey,
     stripePubKey: process.env.stripePubKey,
-    stripeSecretKey: process.env.stripeSecretKey
+    stripeSecretKey: process.env.stripeSecretKey,
+    sendGridApiKEY: process.env.sendGridApiKEY,
+    hostName:process.env.HOST_URL
 }
