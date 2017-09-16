@@ -5,9 +5,9 @@ export default [{
     label: "Subject Line",
     name: "subject"
 }, {
-    label: "Email Body",
-    name: "body"
+    label: "Email Heading",
+    name: "heading"
 }, {
     label: "Recipients List",
-    name: "emails"
+    name: "recipients"
 }];

@@ -1,8 +1,7 @@
 const config = require('../config');
 const sgMail = require('@sendgrid/mail');
-sgMail.setApiKey(config.sendGridApiKEY);
-const surveyTemplate = require('./emailTemplates/surveyTemplate');
-module.exports = (surveyData, callback) => {
+sgMail.setApiKey(config.sendGridApiKey);
+module.exports = (surveyData, surveyId) => {
     const recipients = surveyData.recipients.split(',').map(email => email.trim());
     const personalizations = surveyData.recipients.split(",").map(email => {
         email = email.trim();
@@ -18,12 +17,12 @@ module.exports = (surveyData, callback) => {
         from: 'Emaily <no-reply@emaily.com>',
         subject: surveyData.subject,
         substitutionWrappers: ['{{', '}}'],
-        templateId: '86ef4271-fc19-45df-b0c3-51e4e98d18a4',
+        templateId: config.sendGridTemplateId,
         substitutions: {
-            hostName: config.hostName
+            hostName: config.hostName,
+            heading: surveyData.heading,
+            surveyId
         }
     };
-    console.log(msg);
-    // html: surveyTemplate(surveyData),
     return sgMail.sendMultiple(msg);
 }

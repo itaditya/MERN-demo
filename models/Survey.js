@@ -7,7 +7,7 @@ const SurveySchema = new Schema({
         ref: 'User'
     },
     title: String,
-    body: String,
+    heading: String,
     subject: String,
     recipients: [RecipientSchema],
     yes: {
