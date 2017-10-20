@@ -1,16 +1,19 @@
 ## To Start Local Server - 
  A. Setting Up the server - 
-     1. Install heroku-cli
-     2. Install nodemon with `npm i -g nodemon`
-     3. Run `npm i` to install the server-side dependencies
-     4. Run `touch .env` then open it and fill it like the sample .env file.
-     5. Run `npm start` and make sure the mongo instance is also running.
+ 
+  1. Install heroku-cli
+  2. Install nodemon with `npm i -g nodemon`
+  3. Run `npm i` to install the server-side dependencies
+  4. Run `touch .env` then open it and fill it like the sample .env file.
+  5. Run `npm start` and make sure the mongo instance is also running.
+     
  B. Setting Up the client - 
-     1. Run `cd client ` in separate terminal to change into client directory.
-     2. In client directory run `npm i` to install client-side dependencies.
-     3. In client directory run `touch .env` and fill `stripePubKey=pk_test_--------------` in it .
-     4. In client directory run `npm start `.
-     5. Navigate to localhost:3000 in the browser.
+ 
+  1. Run `cd client ` in separate terminal to change into client directory.
+  2. In client directory run `npm i` to install client-side dependencies.
+  3. In client directory run `touch .env` and fill `stripePubKey=pk_test_--------------` in it .
+  4. In client directory run `npm start `.
+  5. Navigate to localhost:3000 in the browser.
  
 ## Sample .env file
 ```
