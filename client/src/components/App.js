@@ -11,24 +11,24 @@ import Dashboard from "./Dashboard";
 import SurveyNew from "./surveys/SurveyNew";
 
 class App extends Component {
-    componentDidMount() {
-        this.props.fetchUser();
-    }
-    render(){
-        return (
+  componentDidMount() {
+      this.props.fetchUser();
+  }
+  render(){
+      return (
+        <div>
+          <BrowserRouter>
             <div>
-                <BrowserRouter>
-                    <div>
-                        <Header/>
-                        <div className="container">
-                            <Route exact path="/" component={Landing} />
-                            <Route exact path="/surveys" component={Dashboard} />
-                            <Route exact path="/surveys/new" component={SurveyNew} />
-                        </div>
-                    </div>
-                </BrowserRouter>
+              <Header/>
+              <div className="container">
+                <Route exact path="/" component={Landing} />
+                <Route exact path="/surveys" component={Dashboard} />
+                <Route exact path="/surveys/new" component={SurveyNew} />
+              </div>
             </div>
-        );
-    }
+          </BrowserRouter>
+        </div>
+      );
+  }
 };
 export default connect(null, actions)(App);
